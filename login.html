@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0b1220">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Torneo Agnosine - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-login splash-active">
+
+<div id="splash-screen" aria-label="Caricamento">
+    <img src="assets/logo.png" alt="Torneo Agnosine" class="splash-logo">
+    <div class="splash-bar-track">
+        <div class="splash-bar-fill" id="splashBar"></div>
+    </div>
+</div>
+
+<div id="navbar-mount"></div>
+
+<div class="login-wrapper">
+    <div class="login-card">
+        <div class="logo">
+            <div class="logo-icon">⚽</div>
+            <h1>Torneo Agnosine</h1>
+            <p>Accedi al sistema</p>
+        </div>
+
+        <div class="error" id="error">Credenziali non valide</div>
+
+        <form id="loginForm">
+            <div class="input-group-custom">
+                <label class="input-label" for="username">Username</label>
+                <input type="text" id="username" class="input-custom" placeholder="Inserisci username" autocomplete="username" required>
+            </div>
+
+            <div class="input-group-custom">
+                <label class="input-label" for="password">Password</label>
+                <input type="password" id="password" class="input-custom" placeholder="Password" autocomplete="current-password" required>
+            </div>
+
+            <button type="submit" class="login-btn">🔑 ACCEDI</button>
+        </form>
+
+        <div class="footer-text">Sistema gestione torneo</div>
+    </div>
+</div>
+
+<script type="module" src="js/splash.js"></script>
+<script type="module" src="js/navbar.js"></script>
+<script type="module" src="js/login.js"></script>
+</body>
+</html>

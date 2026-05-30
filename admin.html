@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0b1220">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="splash-active">
+
+<div id="splash-screen" aria-label="Caricamento">
+    <img src="assets/logo.png" alt="Torneo Agnosine" class="splash-logo">
+    <div class="splash-bar-track">
+        <div class="splash-bar-fill" id="splashBar"></div>
+    </div>
+</div>
+
+<div id="navbar-mount"></div>
+
+<div class="admin-wrap">
+    <h2>⚙️ Admin Panel</h2>
+
+    <h4>Gestione Sport</h4>
+    <div class="form-card">
+        <input class="form-control" id="sportName" placeholder="Nome sport (es. Calcio, Basket)">
+        <input class="form-control" id="sportIcon" placeholder="Emoji (es. ⚽ 🏀 🏐)" maxlength="4" inputmode="text">
+        <button class="btn btn-primary" id="addSportBtn" type="button">Aggiungi Sport</button>
+
+        <ul class="admin-list" id="sportsList"></ul>
+    </div>
+
+    <h4>Aggiungi Squadra</h4>
+    <div class="form-card">
+        <input class="form-control" id="teamName" placeholder="Nome squadra">
+        <button class="btn btn-primary" id="addTeamBtn" type="button">Aggiungi</button>
+
+        <ul class="admin-list" id="teamsList"></ul>
+    </div>
+
+    <h4>Crea Utente</h4>
+    <div class="form-card">
+        <input class="form-control" id="userUsername" placeholder="Username" autocomplete="off">
+        <input class="form-control" id="userPassword" placeholder="Password" type="password" autocomplete="new-password">
+
+        <select class="form-control" id="userRole">
+            <option value="admin">Admin</option>
+            <option value="campo">Campo</option>
+        </select>
+
+        <button class="btn btn-success" id="addUserBtn" type="button">Crea Utente</button>
+
+        <ul class="admin-list" id="usersList"></ul>
+    </div>
+
+    <h4>Crea Partita</h4>
+    <div class="form-card">
+        <select class="form-control" id="matchSport">
+            <option value="">-- Seleziona sport --</option>
+        </select>
+        <select class="form-control" id="matchTeam1"></select>
+        <select class="form-control" id="matchTeam2"></select>
+        <input class="form-control" type="datetime-local" id="matchDate">
+        <input class="form-control" type="number" id="matchGiornata" placeholder="Giornata" inputmode="numeric">
+        <button class="btn btn-warning" id="addMatchBtn" type="button">Crea Partita</button>
+
+        <div class="table-scroll">
+            <table class="table-light">
+                <thead>
+                    <tr>
+                        <th>Sport</th>
+                        <th>Squadre</th>
+                        <th>Giornata</th>
+                        <th>Stato</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="matchesTable"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="js/splash.js"></script>
+<script type="module" src="js/navbar.js"></script>
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>
